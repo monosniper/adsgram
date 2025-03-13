@@ -1,3 +1,13 @@
+<script lang="ts" setup>
+import { computed } from "vue";
+import { useRoute } from "nuxt/app";
+import arrowblueIcon from "@/assets/icons/arrowblue.svg?raw";
+
+const route = useRoute();
+const locale = computed(() => route.params.locale || "ru");
+const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${locale.value}.png`);
+</script>
+
 <template>
   <section class="steps" data-aos="fade-up" data-aos-offset="100">
     <div class="container">
@@ -12,14 +22,17 @@
       <div class="steps__wrapper">
         <div class="steps__content" data-aos="fade-right" data-aos-delay="400">
           <div class="steps__icons" data-aos="zoom-in" data-aos-delay="500">
-            <img v-for="n in 10" :key="n" src="/assets/images/icons.svg" alt="Иконка" />
+            <img v-for="n in 10" :key="n" alt="Иконка" src="/assets/images/icons.svg"/>
           </div>
 
           <div class="steps__list">
             <div class="steps__item steps__item--active" data-aos="fade-up" data-aos-delay="600">
               <h3 class="steps__item-title">{{ $t("steps.step1.title") }}</h3>
               <p class="steps__item-text">{{ $t("steps.step1.text") }}</p>
-              <a href="#" class="steps__link">{{ $t("steps.step1.link") }}</a>
+              <a class="steps__link" href="#">
+                {{ $t("steps.step1.link") }}
+                <i class="steps__icon" v-html="arrowblueIcon"></i>
+              </a>
             </div>
 
             <div class="steps__item" data-aos="fade-up" data-aos-delay="700">
@@ -33,8 +46,9 @@
             </div>
           </div>
         </div>
+
         <div class="steps__image" data-aos="fade-left" data-aos-delay="900">
-          <img src="/assets/images/balance.png" alt="{{ $t('steps.image_alt') }}" />
+          <img :src="balanceImageDesktop" :alt="$t('steps.image_alt')" />
         </div>
       </div>
     </div>
@@ -42,7 +56,7 @@
 </template>
 
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .steps {
   padding: 80px 0;
   background: #FFFFFF;
@@ -60,7 +74,6 @@
     font-weight: 600;
     display: block;
     margin-bottom: 12px;
-    text-transform: uppercase;
   }
 
   &__title {
@@ -71,6 +84,7 @@
   }
 
   &__subtitle {
+    max-width: 720px;
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 40px;
@@ -142,14 +156,35 @@
   }
 
   &__link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     margin-top: 8px;
     font-size: 16px;
     font-weight: 600;
     color: #005bff;
     text-decoration: none;
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+      .steps__icon {
+        transform: translateX(7px) scale(1.1);
+        opacity: 0.85;
+      }
+    }
   }
 
+  .steps__icon {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+  }
+
+  .steps__link:hover .steps__icon svg {
+    transform: translateX(7px) scale(1.1);
+    opacity: 0.85;
+  }
 
   &__image {
     position: relative;
@@ -280,20 +315,30 @@
     }
 
     &__image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      max-width: 100%;
-      margin-top: 24px;
+      width: 140%;
+      max-width: none;
+      margin-left: -25px;
+      margin-right: -16px;
+      position: relative;
     }
-
+    .steps__image::before {
+      content: "";
+      position: absolute;
+      width: 100%; // Фон на всю ширину экрана
+      height: 100%;
+      background: #F4F4F6; // Цвет фона
+      top: 0;
+      left: -50px;
+      border-radius: 0;
+      z-index: 0;
+    }
     &__image img {
       width: 100%;
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
+      max-width: none;
+      position: relative;
+      z-index: 1;
     }
   }
 }
+
 </style>
