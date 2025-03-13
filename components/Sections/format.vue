@@ -38,7 +38,7 @@ const phoneImage = computed(() => `/images/${locale.value}/mobile${locale.value}
               <span>{{ $t("native_post.audience") }}</span>
             </li>
             <li class="native-post__item" data-aos="flip-up" data-aos-delay="550">
-              <img alt="Оплата" src="/assets/icons/brilliand.svg"/>
+              <img alt="Оплата" src="/assets/icons/payment.svg"/>
               <span>{{ $t("native_post.payment") }}</span>
             </li>
           </ul>
