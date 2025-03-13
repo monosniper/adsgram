@@ -135,12 +135,30 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
 
   &__item {
     position: relative;
-    padding-left: 16px;
-  }
+    padding-left: 20px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: border-left 0.3s ease-in-out;
 
-  &__item--active {
-    border-left: 4px solid #005bff;
-    margin-left: -1px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: -0.5px;
+      height: calc(100% + 25px);
+      width: 4px;
+      background-color: transparent;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      background-color: #8a2be2;
+    }
+    &:nth-child(1):hover::before {
+      background-color: #005bff;
+    }
   }
 
   &__item-title {
@@ -199,7 +217,7 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
     margin-left: 10px;
     position: absolute;
     width: 90%;
-    height: 90%;
+    height:118%;
     background: #F4F4F6;
     border-radius: 24px;
     top: 20px;
@@ -208,6 +226,7 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
   }
 
   &__image img {
+    top: 55px;
     position: relative;
     width: 100%;
     max-width: 500px;
@@ -226,7 +245,7 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
 
     .container {
       padding: 10px 16px;
-      padding-bottom: 120px;
+      padding-bottom: -120px;
     }
 
     &__tag {
@@ -269,27 +288,48 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
       flex-direction: column;
       gap: 24px;
       position: relative;
-      padding-left: 1px;
+      padding-left: 10px; // Немного сдвигаем влево, чтобы полоска не была слишком узкой
     }
 
     &__list::before {
       content: "";
       position: absolute;
-      width: 1.5px;
+      width: 2px;
       height: 100%;
-      background: #53586200;
-      left: 0;
+      background: #D1D1D2;
+      left: 10px;
       top: 0;
     }
 
     &__item {
       position: relative;
       padding-left: 16px;
-    }
+      min-height: 60px; // Фиксируем высоту для одинаковой длины полоски
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: border-left 0.3s ease-in-out;
 
-    &__item--active {
-      border-left: 2px solid #005bff;
-      padding-left: 14px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -12px;
+        height: calc(100% + 24px); // Делаем полоску длиннее, чтобы не было разрывов
+        width: 3px; // Чуть тоньше, чем на десктопе
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out, height 0.2s ease-in-out;
+      }
+
+      &:hover::before {
+        background-color: #8a2be2; // Фиолетовый по умолчанию
+      }
+
+      &:nth-child(1):hover::before {
+        background-color: #005bff; // Первый элемент - синий
+        height: calc(100% - 3px); // Уменьшаем только сверху
+        top: -9px;
+      }
     }
 
     &__item-title {
@@ -321,18 +361,21 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
       margin-right: -16px;
       position: relative;
     }
+
     .steps__image::before {
       content: "";
       position: absolute;
       width: 100%; // Фон на всю ширину экрана
       height: 100%;
-      background: #F4F4F6; // Цвет фона
+      background: #F4F4F6;
       top: 0;
       left: -50px;
       border-radius: 0;
       z-index: 0;
     }
+
     &__image img {
+      top: 0;
       width: 100%;
       max-width: none;
       position: relative;
@@ -340,5 +383,6 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
     }
   }
 }
+
 
 </style>
