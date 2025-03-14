@@ -33,6 +33,10 @@ const phoneImage = computed(() => `/images/${locale.value}/mobile${locale.value}
               <img alt="Время" src="/assets/icons/time.svg"/>
               <span>{{ $t("native_post.time") }}</span>
             </li>
+            <li class="native-post__item" data-aos="flip-up" data-aos-delay="450">
+              <img alt="Время" src="/assets/icons/frequency.svg"/>
+              <span>{{ $t("native_post.time") }}</span>
+            </li>
             <li class="native-post__item" data-aos="flip-up" data-aos-delay="500">
               <img alt="Аудитория" src="/assets/icons/audience.svg"/>
               <span>{{ $t("native_post.audience") }}</span>
