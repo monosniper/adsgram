@@ -61,7 +61,7 @@ const redirectToLogin = () => {
         </div>
 
         <div class="mobile-menu__actions">
-            <button class="mobile-menu__moderate">
+            <button class="mobile-menu__moderate" @click="redirectToLogin">
                 {{ $t("button.monetize") }}
             </button>
         </div>
