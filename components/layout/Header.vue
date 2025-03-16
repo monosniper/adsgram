@@ -6,6 +6,10 @@ const isMobileMenuOpen = ref(false);
 const toggleMobileMenu = () => {
     isMobileMenuOpen.value = !isMobileMenuOpen.value;
 };
+const redirectToLogin = () => {
+  window.location.href = "https://partner.adsgram.ai/login";
+};
+
 </script>
 
 <template>
@@ -24,9 +28,9 @@ const toggleMobileMenu = () => {
 
             <div class="header__actions">
                 <SharedLanguageSwitcher class="lang-switcher__desktop" />
-                <button class="header__moderate">
-                    {{ $t("button.monetize") }}
-                </button>
+              <button class="header__moderate" @click="redirectToLogin">
+                {{ $t("button.monetize") }}
+              </button>
                 <div class="header__burger" @click="toggleMobileMenu">
                     <i v-html="isMobileMenuOpen ? closeIcon : burgerIcon"></i>
                 </div>

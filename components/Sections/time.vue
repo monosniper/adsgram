@@ -1,5 +1,7 @@
-<script setup lang="ts">
-import { ref } from "vue";
+<script lang="ts" setup>
+const redirectToLogin = () => {
+  window.location.href = "https://partner.adsgram.ai/login";
+};
 </script>
 
 <template>
@@ -11,7 +13,7 @@ import { ref } from "vue";
       <p class="time__text" data-aos="fade-right" data-aos-delay="50">
         {{ $t("time.text") }}
       </p>
-      <button class="time__button" data-aos="fade-left" data-aos-delay="75">
+      <button class="time__button" data-aos="fade-left" data-aos-delay="75" @click="redirectToLogin">
         {{ $t("time.button") }}
       </button>
     </div>
@@ -19,61 +21,61 @@ import { ref } from "vue";
 </template>
 
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .time {
-    padding: 80px 0;
-    background: #F4F4F6;
-    text-align: center;
+  padding: 80px 0;
+  background: #F4F4F6;
+  text-align: center;
 
-    .container {
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 0 16px;
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #181D27;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    font-size: 20px;
+    color: #535862;
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    background: #005bff;
+    color: #FFFFFF;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  &__button:hover {
+    background: #FFFFFF;
+    color: #005bff;
+  }
+
+  @media (max-width: 768px) {
+    & {
+      padding: 60px 0;
     }
 
     &__title {
-        font-size: 36px;
-        font-weight: 700;
-        color: #181D27;
-        margin-bottom: 12px;
+      font-size: 30px;
     }
 
     &__text {
-        font-size: 20px;
-        color: #535862;
-        margin-bottom: 32px;
+      font-size: 18px;
     }
-
-    &__button {
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 600;
-        background: #005bff;
-        color: #FFFFFF;
-        padding: 16px 24px;
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-    &__button:hover {
-        background: #FFFFFF;
-        color: #005bff;
-    }
-
-    @media (max-width: 768px) {
-        & {
-            padding: 60px 0;
-        }
-
-        &__title {
-            font-size: 30px;
-        }
-
-        &__text {
-            font-size: 18px;
-        }
-    }
+  }
 }
 </style>

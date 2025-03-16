@@ -1,65 +1,70 @@
 {
   "menu": {
-    "experience": "Experience",
-    "how_it_works": "How it works",
+    "experience": "About Us",
+    "how_it_works": "How to Connect",
     "format": "Format"
   },
   "button": {
     "monetize": "Monetize"
   },
   "time": {
-    "title": "The time has come",
-    "text": "start earning with AdsGram today",
-    "button": "Go to dashboard"
+    "title": "The Time Has Come",
+    "text": "Start earning with AdsGram today",
+    "button": "Go to Dashboard"
   },
   "native_post": {
     "tag": "Format",
-    "title": "Native post in the channel (bot)",
+    "title": "Native Post in the Channel (Bot)",
     "subtitle": "The ad looks like a native post in the channel",
-    "format": "format: text + img/gif",
-    "time": "time: 48 hours",
-    "frequency": "frequency: 1 to 3 times a day",
-    "audience": "audience: all, including Premium",
-    "payment": "payment: per CPM (views)"
+    "format_label": "Format",
+    "format": "Text + image or GIF",
+    "time_label": "Time",
+    "time": "48 hours",
+    "frequency_label": "Frequency",
+    "frequency": "1 to 3 times per day",
+    "audience_label": "Audience",
+    "audience": "All, including Telegram Premium",
+    "payment_label": "Payment",
+    "payment": "Per CPM (views)"
   },
   "footer": {
     "copyright": "© 2025 AdsGram. All rights reserved"
   },
   "steps": {
-    "tag": "connection",
-    "title": "3 steps to USDT in your account",
-    "subtitle": "We have made the connection and setup as comfortable and fast as possible, and our support team is ready to help with any questions",
+    "tag": "Connection",
+    "title": "3 Steps to USDT in Your Account",
+    "subtitle": "We have made the connection and setup process as smooth and fast as possible, and our support team is ready to assist with any questions",
     "step1": {
       "title": "Add the bot and set the ad frequency",
-      "text": "Connect the bot or channel via API, specify the admin, and choose the allowed ad display frequency in the ad channel",
-      "link": "Get started"
+      "text": "Connect a bot or channel via API, assign an admin, and choose the allowed ad frequency in the channel",
+      "link": "Get Started"
     },
     "step2": {
       "title": "The ad is published for 48 hours",
-      "text": "The post remains active for 48 hours after moderation After this period, the post is deleted"
+      "text": "The post remains active for 48 hours after moderation. After this period, the post is automatically removed"
     },
     "step3": {
-      "title": "Every 24 hours, payment arrives in USDT",
-      "text": "We send funds for views (CPM) to your AdsGram account wallet every 24 hours"
+      "title": "Payment in USDT every 24 hours",
+      "text": "We send payments for views (CPM) to your AdsGram wallet every 24 hours"
     },
     "image_alt": "Balance in USDT"
   },
   "trust": {
-    "tag": "about AdsGram",
-    "title": "Why can you trust us?",
-    "subtitle": "We are the leading platform for modern and fast advertising monetization in Telegram, with direct support from TON and market leaders",
-    "card1": "Supported by TON",
+    "tag": "About AdsGram",
+    "title": "Why Do People Trust Us?",
+    "subtitle": "We are the leading platform for modern and fast ad monetization in Telegram, supported by the TON blockchain and market leaders",
+    "card1": "Support from TON",
     "card2": "Automation and passive income",
-    "card3": "Thoroughly moderating advertisers",
-    "card4": "Payouts in USDT for views (CPM)"
+    "card3": "Thorough advertiser moderation",
+    "card4": "Payments in USDT for views (CPM)"
   },
   "hero": {
-    "title1": "Monetize your channel",
-    "title2": "or bot with no fees",
+    "title1": "Monetize Your Channel",
+    "title2": "or Bot Without Fees",
     "text1": "Convenient, profitable, fast,",
     "text2": "without complex conditions",
-    "text3": "and unnecessary formalities",
-    "button": "Let's go"
+    "text3": "or unnecessary formalities",
+    "button": "Let's Go"
   },
   "lang": {
     "russian": "Russian",

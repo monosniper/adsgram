@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { computed } from "vue";
-import { useRoute } from "nuxt/app";
+import {computed} from "vue";
+import {useRoute} from "nuxt/app";
 import arrowblueIcon from "@/assets/icons/arrowblue.svg?raw";
 
 const route = useRoute();
@@ -29,7 +29,7 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
             <div class="steps__item steps__item--active" data-aos="fade-up" data-aos-delay="300">
               <h3 class="steps__item-title">{{ $t("steps.step1.title") }}</h3>
               <p class="steps__item-text">{{ $t("steps.step1.text") }}</p>
-              <a class="steps__link" href="#">
+              <a class="steps__link" href="https://partner.adsgram.ai/login">
                 {{ $t("steps.step1.link") }}
                 <i class="steps__icon" v-html="arrowblueIcon"></i>
               </a>
@@ -48,7 +48,7 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
         </div>
 
         <div class="steps__image" data-aos="fade-left" data-aos-delay="450">
-          <img :src="balanceImageDesktop" :alt="$t('steps.image_alt')" />
+          <img :alt="$t('steps.image_alt')" :src="balanceImageDesktop"/>
         </div>
       </div>
     </div>
@@ -156,6 +156,7 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
     &:hover::before {
       background-color: #005bff;
     }
+
     &:nth-child(1):hover::before {
       background-color: #005bff;
     }
@@ -217,7 +218,7 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
     margin-left: 10px;
     position: absolute;
     width: 90%;
-    height:118%;
+    height: 118%;
     background: #F4F4F6;
     border-radius: 24px;
     top: 20px;
@@ -245,7 +246,7 @@ const balanceImageDesktop = computed(() => `/images/${locale.value}/balance${loc
 
     .container {
       padding: 10px 16px;
-     /* padding-bottom: -120px;*/
+      /* padding-bottom: -120px;*/
     }
 
     &__tag {
