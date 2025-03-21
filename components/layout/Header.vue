@@ -110,6 +110,7 @@ const redirectToLogin = () => {
                 color: #181D27;
                 text-decoration: none;
                 transition: color 0.3s ease;
+	            text-transform: lowercase;
 
                 &:hover {
                     color: $btn-color-2;

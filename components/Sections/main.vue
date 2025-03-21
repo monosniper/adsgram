@@ -187,4 +187,21 @@ const redirectToLogin = () => {
     }
   }
 }
+
+@media screen and (max-width: 1350px) {
+	.hero {
+		&__title {
+			font-size: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.hero {
+		&__title {
+			text-wrap: wrap;
+			font-size: 35px;
+		}
+	}
+}
 </style>
