@@ -19,7 +19,7 @@
     "format_label": "格式",
     "format": "文本 + 图片或 GIF",
     "time_label": "时长",
-    "time": "48 小时",
+    "time": "24 小时",
     "frequency_label": "频率",
     "frequency": "每天 1 至 3 次",
     "audience_label": "受众",
@@ -40,8 +40,8 @@
       "link": "开始"
     },
     "step2": {
-      "title": "广告展示 48 小时",
-      "text": "帖子在审核通过后保持活跃 48 小时，到期后会自动删除"
+      "title": "广告展示 24 小时",
+      "text": "帖子在审核通过后保持活跃 24 小时，到期后会自动删除"
     },
     "step3": {
       "title": "每 24 小时结算 USDT",

@@ -19,7 +19,7 @@
     "format_label": "Format",
     "format": "Text + image or GIF",
     "time_label": "Time",
-    "time": "48 hours",
+    "time": "24 hours",
     "frequency_label": "Frequency",
     "frequency": "1 to 3 times per day",
     "audience_label": "Audience",
@@ -40,8 +40,8 @@
       "link": "Get Started"
     },
     "step2": {
-      "title": "The ad is published for 48 hours",
-      "text": "The post remains active for 48 hours after moderation. After this period, the post is automatically removed"
+      "title": "The ad is published for 24 hours",
+      "text": "The post remains active for 24 hours after moderation. After this period, the post is automatically removed"
     },
     "step3": {
       "title": "Payment in USDT every 24 hours",
