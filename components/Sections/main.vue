@@ -15,8 +15,7 @@ const redirectToLogin = () => {
     <div class="container">
       <div class="hero__content" data-aos="fade-right">
         <h1 class="hero__title" data-aos="fade-right">
-          <span>{{ $t("hero.title1") }}</span>
-          <span>{{ $t("hero.title2") }}</span>
+          <span>{{ $t("hero.title1") }} <br> {{ $t("hero.title2") }}</span>
         </h1>
         <p class="hero__text" data-aos="fade-right" data-aos-delay="50">
           <span>{{ $t("hero.text1") }}</span> <span>{{ $t("hero.text2") }}</span>
@@ -62,6 +61,12 @@ const redirectToLogin = () => {
     color: #02091C;
     line-height: 1.2;
     margin-bottom: 64px;
+	  
+	  @media screen and (max-width: 770px) {
+		  br {
+			  display: none;
+		  }
+	  }
   }
 
   &__text {
